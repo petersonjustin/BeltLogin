@@ -4,7 +4,6 @@ Python/FlaskMYSQL
 Python/DjangoV3/djangoEnv
 Python/DjangoV3/sports_orm
 netCore/Intro/MusicLINQ
-appsettings.json
 appsettings.Development.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
