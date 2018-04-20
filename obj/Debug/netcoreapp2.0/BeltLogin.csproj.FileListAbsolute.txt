@@ -18,3 +18,13 @@
 /Users/justinpeterson/Desktop/Exams/BeltLogin/obj/Debug/netcoreapp2.0/BeltLogin.AssemblyInfo.cs
 /Users/justinpeterson/Desktop/Exams/BeltLogin/obj/Debug/netcoreapp2.0/BeltLogin.dll
 /Users/justinpeterson/Desktop/Exams/BeltLogin/obj/Debug/netcoreapp2.0/BeltLogin.pdb
+/var/www/BeltLogin/bin/Debug/netcoreapp2.0/BeltLogin.deps.json
+/var/www/BeltLogin/bin/Debug/netcoreapp2.0/BeltLogin.runtimeconfig.json
+/var/www/BeltLogin/bin/Debug/netcoreapp2.0/BeltLogin.runtimeconfig.dev.json
+/var/www/BeltLogin/bin/Debug/netcoreapp2.0/BeltLogin.dll
+/var/www/BeltLogin/bin/Debug/netcoreapp2.0/BeltLogin.pdb
+/var/www/BeltLogin/obj/Debug/netcoreapp2.0/BeltLogin.csproj.CoreCompileInputs.cache
+/var/www/BeltLogin/obj/Debug/netcoreapp2.0/BeltLogin.AssemblyInfoInputs.cache
+/var/www/BeltLogin/obj/Debug/netcoreapp2.0/BeltLogin.AssemblyInfo.cs
+/var/www/BeltLogin/obj/Debug/netcoreapp2.0/BeltLogin.dll
+/var/www/BeltLogin/obj/Debug/netcoreapp2.0/BeltLogin.pdb
