@@ -1,0 +1,117 @@
+﻿@model BeltLogin.Models.ValidRegUser
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<header>
+    <div class="clearfix header-wrapper">
+        <h1 class="dilb">Dojo Activity Center</h1>
+    </div>
+</header>
+<div class="container body-content">
+    <div class="row">
+        <div class="col-12">
+            <h1>Please Register</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <form asp-controller="Home" asp-action="RegisterUser" method="post">
+                <div class="register">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="span-wrapper">
+                                <span asp-validation-for="FirstName"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label asp-for="FirstName">First Name: <span class="tiny">at least 3 chars</span></label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" asp-for="FirstName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="span-wrapper">
+                                <span asp-validation-for="LastName"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label asp-for="LastName">Last Name: <span class="tiny">at least 3 chars</span></label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" asp-for="LastName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="span-wrapper">
+                                <span asp-validation-for="Email"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label asp-for="Email">Email Address:</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" asp-for="Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="span-wrapper">
+                                <span asp-validation-for="Password"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label asp-for="Password">Password: <span class="tiny">8 chars or more</span></label>
+                        </div>
+                        <div class="col-6">
+                            <input type="password" asp-for="Password">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="span-wrapper">
+                                <span asp-validation-for="confirm_Password"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label asp-for="confirm_Password">Confirm Password:</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="password" asp-for="confirm_Password">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8"></div>
+                        <div class="col-4">
+                            <button type="submit">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+            <div class="row buffer">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <a href="login">
+                        <button class="buffer">Need to Login?</button>
+                    </a>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </div>
+</div>

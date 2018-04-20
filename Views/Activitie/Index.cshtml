@@ -1,0 +1,95 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@Html.Partial("Menu")
+<div class="container body-content">
+    <div class="row">
+        <div class="col-12">
+            <h1>Welcome @ViewBag.user.FirstName </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <th>Activity:</th>
+                    <th>Date and Time:</th>
+                    <th>Duration</th>
+                    <th>Event Coordinator</th>
+                    <th>Number of Participants</th>
+                    <th>Actions</th>
+                </thead>
+                <tbody>
+                    <!-- foreach in row -->
+                    @{
+                        foreach (var act in ViewBag.activities)
+                        {
+                            int partners = 0;
+                            int toggle = 0;
+                            if (act.Date > DateTime.Now)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="activity/@act.ActivitieId">
+                                            @act.Title
+                                        </a>
+                                    </td>
+                                    <td>@act.Date.Month/@act.Date.Day at @act.Time.TimeOfDay</td>
+                                    <td>@act.Duration @act.DurationMod</td>
+                                    <td>@act.Creator.FirstName @act.Creator.LastName</td>
+                                        @foreach (var dude in act.Participant)
+                                        {
+                                            partners++;
+                                            @if(dude.PartId.UserId == ViewBag.user.UserId)
+                                            {
+                                                toggle++;
+                                            }
+                                        }
+                                    <td>@partners</td>
+                                    <td>
+
+                                        @if (ViewBag.user.UserId == act.CreatorId)
+                                        {
+                                            <form asp-action="DeleteActivity" method="post">
+                                                <input type="hidden" value="@act.ActivitieId" name="actId">
+                                                <input type="submit" value="Delete">
+                                            </form>
+                                        }
+                                        else
+                                        {
+
+                                            @if (toggle > 1)
+                                            {
+                                                <form asp-action="LeaveActivity" method="post">
+                                                    <input type="hidden" value="@ViewBag.user.UserId" name="participantId">
+                                                    <input type="hidden" value="@act.ActivitieId" name="actId">
+                                                    <input type="submit" value="Leave">
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                <form asp-action="JoinActivity" method="post">
+                                                    <input type="hidden" value="@ViewBag.user.UserId" name="participantId">
+                                                    <input type="hidden" value="@act.ActivitieId" name="actId">
+                                                    <input type="submit" value="Join">
+                                                </form>
+                                            }
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    }
+                    <!-- end foreach -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a href="new">
+                <button>Add New Activity!</button>
+            </a>
+        </div>
+    </div>
+</div>

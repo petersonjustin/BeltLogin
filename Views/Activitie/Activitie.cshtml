@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@Html.Partial("Menu")
+<div class="container body-content">
+    <div class="row">
+        <div class="col-10">
+            <h1>Welcome to @ViewBag.act.Title, @ViewBag.user.FirstName @ViewBag.user.LastName</h1>
+        </div>
+        <div class="col-2">
+            @{
+                @if (ViewBag.user.UserId == ViewBag.act.CreatorId)
+                {
+                    <form asp-action="DeleteActivity" method="post">
+                        <input type="hidden" value="@ViewBag.act.ActivitieId" name="actId">
+                        <button type="submit">Delete</button>
+                    </form>
+                }
+                else
+                {
+                    int toggle = 0;
+                    @foreach (var dude in ViewBag.act.Participant)
+                    {
+                        @if(dude.PartId.UserId == ViewBag.user.UserId)
+                        {
+                            toggle++;
+                        }
+                    }
+                    @if (toggle >= 1)
+                    {
+                        <form asp-action="LeaveActivity" method="post">
+                            <input type="hidden" value="@ViewBag.user.UserId" name="participantId">
+                            <input type="hidden" value="@ViewBag.act.ActivitieId" name="actId">
+                            <button type="submit">Leave</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="JoinActivity" method="post">
+                            <input type="hidden" value="@ViewBag.user.UserId" name="participantId">
+                            <input type="hidden" value="@ViewBag.act.ActivitieId" name="actId">
+                            <button type="submit">Join</button>
+                        </form>
+                    }
+                }
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Event Coordinator: @ViewBag.act.Creator.FirstName @ViewBag.act.Creator.LastName</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Description</h3>
+            <p>@ViewBag.act.Description</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Participants:</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <!-- foreach for participants. -->
+        @{
+            foreach (var part in ViewBag.act.Participant)
+            {
+                <h5>@part.PartId.FirstName @part.PartId.LastName</h5>
+            }
+        }
+        </div>
+    </div>
+
+</div>

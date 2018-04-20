@@ -1,0 +1,206 @@
+.green-bg {
+  background-color: green; }
+
+.gray-bg {
+  background-color: #F4F7D9; }
+
+.blue-bg {
+  background-color: #04518C; }
+
+.red-bg {
+  background-color: red; }
+
+.yellow-bg {
+  background-color: yellow; }
+
+.orange-bg {
+  background-color: orange; }
+
+.black-bg {
+  background-color: black; }
+
+.purple-bg {
+  background-color: purple; }
+
+.dilb {
+  display: inline-block; }
+
+.hidden {
+  display: none; }
+
+.invisible {
+  visibility: hidden; }
+
+.tac {
+  text-align: center; }
+
+.tal {
+  text-align: left; }
+
+.tar {
+  text-align: right; }
+
+.tl-arrow {
+  position: absolute;
+  top: -2px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #051c37;
+  transform: rotate(-45deg); }
+
+.tr-arrow {
+  position: absolute;
+  top: -2px;
+  right: -7px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #051c37;
+  transform: rotate(45deg); }
+
+.bl-arrow {
+  position: absolute;
+  bottom: -2px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #051c37;
+  transform: rotate(-135deg); }
+
+.br-arrow {
+  position: absolute;
+  bottom: -3px;
+  right: -7px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #051c37;
+  transform: rotate(135deg); }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.clearfix {
+  clear: both; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.ml20 {
+  margin-left: 20px; }
+
+.m20 {
+  margin: 20px; }
+
+.m0a {
+  margin: 0 auto; }
+
+button, .button {
+  background-color: #051c37;
+  color: white;
+  padding: 7px 25px;
+  border: silver 2px solid;
+  margin: 1px 1px 1px 1px;
+  cursor: pointer;
+  max-width: 100%; }
+  button:hover, .button:hover {
+    background-color: rgba(5, 28, 55, 0.8);
+    padding: 8px 26px;
+    margin: 0; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .large, .medium {
+    display: none; } }
+@media only screen and (min-device-width: 481px) and (max-device-width: 1023px) {
+  .small, .large {
+    display: none; } }
+@media only screen and (min-device-width: 1024px) {
+  .small, .medium {
+    display: none; } }
+body {
+  background-color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  padding-bottom: 20px; }
+
+header {
+  background-color: #3E423A;
+  color: white;
+  padding: 0 30px;
+  margin-bottom: 20px; }
+  header a {
+    color: white;
+    line-height: 50px;
+    text-decoration: none; }
+    header a:hover {
+      color: #F4F7D9; }
+
+.top-bar {
+  background-color: #343a40;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 0; }
+
+.container .navbar {
+  padding: 0px;
+  margin-bottom: 15px; }
+  .container .navbar a {
+    color: white;
+    height: 100%;
+    line-height: 40px;
+    border-right: 1px dotted silver;
+    cursor: pointer; }
+    .container .navbar a:hover {
+      color: silver;
+      text-decoration: none; }
+  .container .navbar a:last-of-type {
+    border: none; }
+.container .buffer {
+  margin-top: 50px; }
+.container .commentbox {
+  padding: 0 0 0 30px; }
+.container .register, .container .login {
+  padding: 25px;
+  border-right: 1px dotted midnightblue; }
+  .container .register label, .container .login label {
+    font-size: 1.3em; }
+  .container .register input, .container .login input {
+    margin-bottom: 20px; }
+  .container .register .span-wrapper, .container .login .span-wrapper {
+    min-height: 30px;
+    height: 30px;
+    margin-top: 20px; }
+    .container .register .span-wrapper span, .container .login .span-wrapper span {
+      color: red;
+      font-size: 0.8em; }
+  .container .register .tiny, .container .login .tiny {
+    font-size: 0.5em;
+    text-align: right;
+    margin-left: 10px; }
+.container .login {
+  border: none; }
+.container textarea.w100 {
+  width: 100%; }
+.container h5 {
+  margin-left: 30px; }
+.container .divider {
+  border-bottom: 2px solid midnightblue;
+  margin-bottom: 20px; }
+.container .m0a {
+  width: 100px; }
+
+/*# sourceMappingURL=base.css.map */

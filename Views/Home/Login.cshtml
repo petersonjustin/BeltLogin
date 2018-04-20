@@ -1,0 +1,71 @@
+@model BeltLogin.Models.ValidLoginUser
+<header>
+    <div class="clearfix header-wrapper">
+        <h1 class="dilb">Dojo Activity Center</h1>
+    </div>
+</header>
+<div class="container body-content">
+    <div class="row">
+        <div class="col-12">
+            <h1>Please Login</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <form asp-controller="Home" asp-action="LoginUser" method="post">
+                <div class="login">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="span-wrapper">
+                                <span asp-validation-for="Email"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="Email">Email</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" name="Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="span-wrapper">
+                                <span asp-validation-for="Password"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="Password">Password</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="password" name="Password">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8"></div>
+                        <div class="col-4">
+                            <button type="submit">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div class="col-6">
+            <div class="row buffer">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <a href="/">
+                        <button>Need to Register?</button>
+                    </a>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </div>
+</div>

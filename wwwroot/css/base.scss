@@ -1,0 +1,110 @@
+// Import modules via all.scss
+@import "modules/modules";
+
+// import helpers
+@import "helpers/buttons";
+@import "helpers/mixins";
+
+// import responsive sheets
+@import "responsive/1phone";
+@import "responsive/2tablet";
+@import "responsive/3desktop";
+
+body{
+    background-color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    padding-bottom: 20px;
+}
+
+header{
+    background-color: $t-stone;
+    color: white;
+    padding: 0 30px;
+    margin-bottom: 20px;
+    a{
+        color: white;
+        line-height: 50px;
+        text-decoration: none;
+        &:hover{
+            color: $t-gray;
+        }
+    }
+}
+.top-bar{
+    background-color: #343a40;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.container{
+
+    .navbar{
+        padding: 0px;
+        margin-bottom: 15px;
+        a{
+            color: white;
+            height: 100%;
+            line-height: 40px;
+            border-right: 1px dotted silver;
+            cursor: pointer;
+            &:hover{
+                color: silver;
+                text-decoration: none;
+            }
+        }
+        a:last-of-type{
+            border: none;
+        }
+    }
+
+    .buffer{
+        margin-top: 50px;
+    }
+    .commentbox{
+        padding: 0 0 0 30px;
+    }
+    .register, .login{
+        padding: 25px;
+        border-right: 1px dotted midnightblue;
+        label{
+            font-size: 1.3em;
+            // margin: 30px 0 10px 0;
+        }
+        input{
+            margin-bottom: 20px;
+        }
+        .span-wrapper{
+            min-height: 30px;
+            height: 30px;
+            margin-top: 20px;
+            span{
+                color: red;
+                font-size:0.8em;
+            }
+        }
+        .tiny{
+            font-size: 0.5em;
+            text-align: right;
+            margin-left: 10px;
+        }
+    }
+    .login{
+        border: none;
+    }
+
+    textarea.w100{
+        width: 100%;
+    }
+    h5{
+        margin-left: 30px;
+    }
+    .divider{
+
+        border-bottom: 2px solid midnightblue;
+        margin-bottom: 20px;
+    }
+    .m0a{
+        width: 100px;
+    }
+}

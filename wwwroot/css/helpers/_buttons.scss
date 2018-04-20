@@ -1,0 +1,16 @@
+// styles for buttons
+button, .button{
+    background-color: $b-blue;
+    color: white;
+    padding: 7px 25px;
+    border: silver 2px solid;
+    // border-radius: 10px;
+    margin: 1px 1px 1px 1px;
+    cursor: pointer;
+    max-width: 100%;
+    &:hover{
+        background-color: $b-blue-8;
+        padding: 8px 26px;
+        margin: 0;
+    }
+}
